@@ -94,6 +94,43 @@ public class ArrayUtils {
         return j;
     }
 
+    //exercitiul 5
+    public void countCharacters(String givenWord) {
+      char[] givenWordArray;
+      do{
+          givenWordArray = givenWord.toCharArray();
+          char searchedCharacter = givenWordArray[0];
+          int counter = 0;
+          for (int i = 0; i < givenWordArray.length; i++) {
+              if(searchedCharacter == givenWordArray[i]) {
+                  counter++;
+              }
+          }
+          //aici e un if ca sa nu numaram spatiile dintr-un string
+          if(((searchedCharacter != ' ') && (searchedCharacter != '\t'))) {
+              System.out.println(searchedCharacter + " - " + counter);
+          }
+          givenWord = givenWord.replace(""+searchedCharacter, "");
+      } while(givenWordArray.length > 1);
+    }
+
+    //exercitiul 6
+    public static void vowelCount(String string) {
+      int vowelCounter = 0;
+      string = string.toLowerCase();
+        for (int i = 0; i < string.length() ; i++) {
+            char character = string.charAt(i);
+            if(character == 'a' || character == 'e' || character == 'i'
+            || character == 'o' || character == 'u') {
+                ++vowelCounter;
+            }
+        }
+        System.out.println("Numarul de vocale este: " + vowelCounter);
+    }
+
+
+
+
 
 
 

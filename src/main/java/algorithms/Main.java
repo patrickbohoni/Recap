@@ -44,6 +44,20 @@ public class Main {
             System.out.println(e2[i] + " ");
         }
 
+        //aplicat exercitiul 5
+        System.out.println(" \n");
+        ArrayUtils charCounter = new ArrayUtils();
+        charCounter.countCharacters("apa");
+        System.out.println(" \n");
+        charCounter.countCharacters("acvariu");
+
+        //aplicat exercitiul 6
+        System.out.println(" \n");
+        ArrayUtils.vowelCount("afara ploua");
+
+
+
+
 
 
 
