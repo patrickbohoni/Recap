@@ -55,6 +55,10 @@ public class Main {
         System.out.println(" \n");
         ArrayUtils.vowelCount("afara ploua");
 
+        //aplicat exercitiul 7
+        System.out.println(" \n");
+        System.out.println(ArrayUtils.removeCharacter("brown fox", 'f'));
+
 
 
 

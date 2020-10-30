@@ -128,6 +128,21 @@ public class ArrayUtils {
         System.out.println("Numarul de vocale este: " + vowelCounter);
     }
 
+    //exercitiul 7
+    public static String removeCharacter(String givenString, char removedChar) {
+      if (givenString == null || givenString.isEmpty()) {
+          return "";
+      }
+      StringBuilder sb = new StringBuilder();
+      char[] chArray = givenString.toCharArray();
+        for (int i = 0; i < chArray.length ; i++) {
+            if (chArray[i] != removedChar ) {
+                sb.append(chArray[i]);
+            }
+        }
+        return sb.toString();
+    }
+
 
 
 
