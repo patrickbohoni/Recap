@@ -29,18 +29,29 @@ public class ArrayUtils {
       }
 
       //exercitiul 1
-    public static void reverseArray(int[] a, int arrLength) {
-      int[] revArray = new int[arrLength];
-      int j = arrLength;
-        for (int i = 0; i < arrLength ; i++) {
-            revArray[j -1] = a[i];
-            j = j - 1;
-        }
+//    public static void reverseArray(int[] a, int arrLength) {
+//      int p = a.length;
+//      int[] revArray = new int[p];
+//      int j = arrLength;
+//        for (int i = 0; i < p ; i++) {
+//            revArray[j -1] = a[i];
+//            j = j - 1;
+//        }
+//
+//        System.out.println("Elementele inversate sunt: \n");
+//        for (int k = 0; k < p; k++) {
+//            System.out.println(revArray[k]);
+//        }
+//    }
 
-        System.out.println("Elementele inversate sunt: \n");
-        for (int k = 0; k < arrLength; k++) {
-            System.out.println(revArray[k]);
+    //exercitiul 1 facut la curs 31.10.2020
+    public static int[] reverseArray(int[] n) {
+        for (int i = 0, j = n.length -1 ; i <= j ; i++, j--) {
+            int a = n[i];
+            n[i] = n[j];
+            n[j] = a;
         }
+        return n;
     }
 
     //exercitiul 2 - array-ul se sorteaza aducand cel mai mic numar la index cu fiecare repetare a celor

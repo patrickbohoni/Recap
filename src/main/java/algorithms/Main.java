@@ -18,9 +18,16 @@ public class Main {
         System.out.println(ArrayUtils.isPalindrome(e4));
 
 
-        //aplicat exercitiul 1
-        ArrayUtils.reverseArray(e4, e4.length);
-        System.out.println(" " + " ");
+//        //aplicat exercitiul 1
+//        ArrayUtils.reverseArray(e4, e4.length);
+//        System.out.println(" " + " ");
+
+        //aplicat exercitiul 1 curs 31.10.2020
+        int m[] = ArrayUtils.reverseArray(e4);
+        for (int j = 0; j < e4.length ; j++) {
+            System.out.println(m[j]);
+        }
+
 
 
         //aplicat exercitiul 2
