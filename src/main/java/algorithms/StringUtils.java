@@ -19,9 +19,11 @@ public class StringUtils {
     public boolean areCirularPermutedStrings(String s1, String s2){
         //s1 = "mare"
         //s2 = "rema"
-        //TODO: 1) for or frequncy array
-        //TODO: 2) using only String methods (e.g: contains, substring, etc)
-        return false;
+        if(s1.length() != s2.length()) {
+            return false;
+        }
+        s2 += s2;
+        return s2.contains(s1);
     }
 
 

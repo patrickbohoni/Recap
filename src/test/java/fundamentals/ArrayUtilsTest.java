@@ -47,14 +47,14 @@ public class ArrayUtilsTest {
         Assertions.assertEquals(3, resultUsingSum);
     }
 
-    @Test
-    public void areCirularPermutedStrings(){
-        String s1 = "mare";
-        String s2 = "rema";
-        String s3 = "rexa";
-        Assertions.assertTrue(StringUtils.areCirularPermutedStrings(s1, s2));
-        Assertions.assertFalse(StringUtils.areCirularPermutedStrings(s1, s3));
-    }
+//    @Test
+//    public void areCirularPermutedStrings(){
+//        String s1 = "mare";
+//        String s2 = "rema";
+//        String s3 = "rexa";
+//        Assertions.assertTrue(StringUtils.areCirularPermutedStrings(s1, s2));
+//        Assertions.assertFalse(StringUtils.areCirularPermutedStrings(s1, s3));
+//    }
 
 
 

@@ -176,14 +176,13 @@ public class ArrayUtils {
         int sum = 0;
         //[1,2,3,4,5] => 1+2+3+4+5 = 15
         //suma = n(n+1)/2 = 5(5+1)/2 =15
-        int expectedSum = maxNumber*(maxNumber + 1)/2;
+        int expectedSum = maxNumber * (maxNumber + 1) / 2;
         for (int i = 0; i < arr.length; i++) {
             sum += arr[i];
         }
         return expectedSum - sum;
 
 
-
-
+    }
 
 }
