@@ -1,6 +1,7 @@
 package fundamentals;
 
 import algorithms.ArrayUtils;
+import algorithms.StringUtils;
 import org.junit.jupiter.api.*;
 
 
@@ -28,6 +29,34 @@ public class ArrayUtilsTest {
         Assertions.assertFalse(ArrayUtils.isPalindrome(e4));
         Assertions.assertFalse(ArrayUtils.isPalindrome(e5));
     }
+
+    @Test
+    public void findMissingNumberTest() {
+        //given
+//        int[] a1 = {1,2,4,5};
+        int[] a1 = {1,5,2,4};
+
+        //[1,2,3,4,5] => 1+2+3+4+5 = 15
+        //suma = n(n+1)/2 = 5(5+1)/2 =15
+        int maxNumber = 5;
+        //when
+        int result = ArrayUtils.findMissingNumber(a1, 5);
+        int resultUsingSum = ArrayUtils.findMissingNumberUsingSum(a1, 5);
+        //then
+        Assertions.assertEquals(3, result);
+        Assertions.assertEquals(3, resultUsingSum);
+    }
+
+    @Test
+    public void areCirularPermutedStrings(){
+        String s1 = "mare";
+        String s2 = "rema";
+        String s3 = "rexa";
+        Assertions.assertTrue(StringUtils.areCirularPermutedStrings(s1, s2));
+        Assertions.assertFalse(StringUtils.areCirularPermutedStrings(s1, s3));
+    }
+
+
 
 
     @AfterAll

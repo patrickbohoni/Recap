@@ -2,7 +2,7 @@ package algorithms;
 
 public class ArrayUtils {
 
-  public static boolean isPalindrome(int[] n) {
+    public static boolean isPalindrome(int[] n) {
 //      boolean isPalindrome = false;
 //      //palindrom: int[] n = { 1, 2, 5, 5, 2, 1};
 //     // i :n[0], n[1], n[2], n[3], n[4], n[5]
@@ -20,15 +20,15 @@ public class ArrayUtils {
 //      return isPalindrome;
 //  }     //asta e exercitiul facut la curs - it works
 
-      for (int i = 0, j = n.length -1 ; i <= j ; i++, j--) {
-          if(n[i] != n[j]){
-              return false;
-          }
-      }
-          return true;
-      }
+        for (int i = 0, j = n.length - 1; i <= j; i++, j--) {
+            if (n[i] != n[j]) {
+                return false;
+            }
+        }
+        return true;
+    }
 
-      //exercitiul 1
+    //exercitiul 1
 //    public static void reverseArray(int[] a, int arrLength) {
 //      int p = a.length;
 //      int[] revArray = new int[p];
@@ -46,7 +46,7 @@ public class ArrayUtils {
 
     //exercitiul 1 facut la curs 31.10.2020
     public static int[] reverseArray(int[] n) {
-        for (int i = 0, j = n.length -1 ; i <= j ; i++, j--) {
+        for (int i = 0, j = n.length - 1; i <= j; i++, j--) {
             int a = n[i];
             n[i] = n[j];
             n[j] = a;
@@ -57,10 +57,10 @@ public class ArrayUtils {
     //exercitiul 2 - array-ul se sorteaza aducand cel mai mic numar la index cu fiecare repetare a celor
     // doua for loop-uri, nu e cel mai eficient mod de a sorta, dar a fost cel dat in exemplu
     public static void selectionSort(int[] selectedArray) {
-        for (int i = 0; i < selectedArray.length ; i++) {
+        for (int i = 0; i < selectedArray.length; i++) {
             int index = i;
-            for (int j = i + 1; j < selectedArray.length ; j++) {
-                if(selectedArray[j] < selectedArray[index]) {
+            for (int j = i + 1; j < selectedArray.length; j++) {
+                if (selectedArray[j] < selectedArray[index]) {
                     index = j;
                 }
             }
@@ -72,7 +72,7 @@ public class ArrayUtils {
 
     //exercitiul 3
     public static boolean isPrime(int n) {
-      //verificam cazurile extreme ca n sa nu fie 1 sau 2
+        //verificam cazurile extreme ca n sa nu fie 1 sau 2
         if (n <= 1) {
             return false;
         }
@@ -95,44 +95,44 @@ public class ArrayUtils {
 
     //exercitiul 4
     public static int removeDuplicateElements(int array[], int n) {
-      int j = 0;
-        for (int i = 0; i < n -1; i++) {
-            if (array[i] != array[i+1]) {
+        int j = 0;
+        for (int i = 0; i < n - 1; i++) {
+            if (array[i] != array[i + 1]) {
                 array[j++] = array[i];
             }
         }
-        array[j++] = array[n -1];
+        array[j++] = array[n - 1];
         return j;
     }
 
     //exercitiul 5
     public void countCharacters(String givenWord) {
-      char[] givenWordArray;
-      do{
-          givenWordArray = givenWord.toCharArray();
-          char searchedCharacter = givenWordArray[0];
-          int counter = 0;
-          for (int i = 0; i < givenWordArray.length; i++) {
-              if(searchedCharacter == givenWordArray[i]) {
-                  counter++;
-              }
-          }
-          //aici e un if ca sa nu numaram spatiile dintr-un string
-          if(((searchedCharacter != ' ') && (searchedCharacter != '\t'))) {
-              System.out.println(searchedCharacter + " - " + counter);
-          }
-          givenWord = givenWord.replace(""+searchedCharacter, "");
-      } while(givenWordArray.length > 1);
+        char[] givenWordArray;
+        do {
+            givenWordArray = givenWord.toCharArray();
+            char searchedCharacter = givenWordArray[0];
+            int counter = 0;
+            for (int i = 0; i < givenWordArray.length; i++) {
+                if (searchedCharacter == givenWordArray[i]) {
+                    counter++;
+                }
+            }
+            //aici e un if ca sa nu numaram spatiile dintr-un string
+            if (((searchedCharacter != ' ') && (searchedCharacter != '\t'))) {
+                System.out.println(searchedCharacter + " - " + counter);
+            }
+            givenWord = givenWord.replace("" + searchedCharacter, "");
+        } while (givenWordArray.length > 1);
     }
 
     //exercitiul 6
     public static void vowelCount(String string) {
-      int vowelCounter = 0;
-      string = string.toLowerCase();
-        for (int i = 0; i < string.length() ; i++) {
+        int vowelCounter = 0;
+        string = string.toLowerCase();
+        for (int i = 0; i < string.length(); i++) {
             char character = string.charAt(i);
-            if(character == 'a' || character == 'e' || character == 'i'
-            || character == 'o' || character == 'u') {
+            if (character == 'a' || character == 'e' || character == 'i'
+                    || character == 'o' || character == 'u') {
                 ++vowelCounter;
             }
         }
@@ -141,13 +141,13 @@ public class ArrayUtils {
 
     //exercitiul 7
     public static String removeCharacter(String givenString, char removedChar) {
-      if (givenString == null || givenString.isEmpty()) {
-          return "";
-      }
-      StringBuilder sb = new StringBuilder();
-      char[] chArray = givenString.toCharArray();
-        for (int i = 0; i < chArray.length ; i++) {
-            if (chArray[i] != removedChar ) {
+        if (givenString == null || givenString.isEmpty()) {
+            return "";
+        }
+        StringBuilder sb = new StringBuilder();
+        char[] chArray = givenString.toCharArray();
+        for (int i = 0; i < chArray.length; i++) {
+            if (chArray[i] != removedChar) {
                 sb.append(chArray[i]);
             }
         }
@@ -155,10 +155,32 @@ public class ArrayUtils {
     }
 
 
+    public static int findMissingNumber(int[] arr, int maxNumber) {
+        int[] f = new int[maxNumber + 1];
+        for (int i = 0; i < f.length; i++) {
+            f[i] = 0;
+        }
+        for (int i = 0; i < arr.length; i++) {
+            f[arr[i]]++;
+        }
+        for (int i = 1; i < f.length; i++) {
+            if (f[i] == 0) {
+                return i;
+            }
+        }
+        return 0;
+    }
 
 
-
-
+    public static int findMissingNumberUsingSum(int[] arr, int maxNumber) {
+        int sum = 0;
+        //[1,2,3,4,5] => 1+2+3+4+5 = 15
+        //suma = n(n+1)/2 = 5(5+1)/2 =15
+        int expectedSum = maxNumber*(maxNumber + 1)/2;
+        for (int i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return expectedSum - sum;
 
 
 
