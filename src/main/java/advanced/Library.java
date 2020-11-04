@@ -36,4 +36,43 @@ public class Library {
         this.bookShelf = bookShelf;
     }
 
+    //exercise b i.
+    public void browseDrama() {
+        Set booksOnShelf = bookShelf.get(Genre.DRAMA);
+        System.out.println(booksOnShelf);
+    }
+
+    public void browseHorror() {
+        Set booksOnShelf = bookShelf.get(Genre.HORROR);
+        System.out.println(booksOnShelf);
+    }
+
+    public void browseScifi() {
+        Set booksOnShelf = bookShelf.get(Genre.SCIFI);
+        System.out.println(booksOnShelf);
+    }
+
+    //exercise b ii.
+    public void browseShelves () {
+        for(Genre key : bookShelf.keySet()) {
+            System.out.println(key);
+        }
+    }
+
+    //exercise biii.
+    public void removeBook(String title, Genre genre) {
+        Set<Book> booksOnShelf = bookShelf.get(genre);
+
+        for (Iterator i = booksOnShelf.iterator(); i.hasNext();) {
+            Book book = (Book) i.next();
+            if (book.getTitle().equals(title)) {
+                i.remove();
+                break;
+            }
+        }
+
+
+    }
+
+
 }
