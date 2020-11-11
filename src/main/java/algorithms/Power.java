@@ -17,8 +17,8 @@ public class Power {
     public static int power(int base, int powerRaised) {
         if (powerRaised != 0) {
             return (base * power(base, powerRaised -1));
-        } else
-            return 1;
-    }
+        }
+        return 1;
+    } //removed else as per comment from Claudia
 
 }

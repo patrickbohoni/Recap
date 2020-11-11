@@ -10,18 +10,15 @@ public class LibraryTestRun {
         System.out.println(" \n");
 
         //exercise b i.
-        luceafarul.browseDrama();
-        luceafarul.browseHorror();
-        luceafarul.browseScifi();
+        System.out.println(luceafarul.browseByGenre(Genre.DRAMA));
 
         //exercise b ii.
         System.out.println(" \n");
-        luceafarul.browseShelves();
+        System.out.println(luceafarul.browseShelves());
 
         //exercise b iii.
         System.out.println(" \n");
         luceafarul.removeBook("Dune",Genre.SCIFI);
-        luceafarul.browseScifi();
 
 
 

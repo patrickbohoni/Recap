@@ -37,27 +37,18 @@ public class Library {
     }
 
     //exercise b i.
-    public void browseDrama() {
-        Set booksOnShelf = bookShelf.get(Genre.DRAMA);
-        System.out.println(booksOnShelf);
-    }
+    public Set<Book> browseByGenre(Genre genre) {
+        Set booksOnShelf = bookShelf.get(genre);
+        return booksOnShelf;
+    } //rewritten as advised by Claudia
 
-    public void browseHorror() {
-        Set booksOnShelf = bookShelf.get(Genre.HORROR);
-        System.out.println(booksOnShelf);
-    }
-
-    public void browseScifi() {
-        Set booksOnShelf = bookShelf.get(Genre.SCIFI);
-        System.out.println(booksOnShelf);
-    }
 
     //exercise b ii.
-    public void browseShelves () {
+    public <Set> java.util.Set<Genre> browseShelves () {
         for(Genre key : bookShelf.keySet()) {
-            System.out.println(key);
         }
-    }
+       return bookShelf.keySet();
+    } //rewritten as advised by Claudia
 
     //exercise biii.
     public void removeBook(String title, Genre genre) {
